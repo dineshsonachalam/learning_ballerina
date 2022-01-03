@@ -5,7 +5,9 @@ multilingual = false
 src = "src"
 title = "Learning Ballerina"
 
+
 [output.html]
 theme = "mytheme"
 default-theme = "light"
 preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/anupama-pathirage/learning_ballerina"

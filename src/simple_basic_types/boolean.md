@@ -6,6 +6,8 @@
 
 #### Sample
 
+<a href="https://play.ballerina.io/?gist=d06ca052f4412b241a4afd1a50a8afbd&file=boolean.bal" target="_blank">Run in Playground   </a>
+
 ```go
 import ballerina/io;
 
