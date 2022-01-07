@@ -1,8 +1,8 @@
 # Boolean
 
 - The `boolean` type has two values: `true`, `false`.
-- The logical operators, ‘!’ , ‘||’ and ‘&&’ are  supported with boolean types. 
-- The ‘||’ and ‘&&’ operators support the same short-circuit behavior as in C. 
+- The logical operators, `!` , `||` and `&&` are  supported with boolean types. 
+- The `||` and `&&` operators support the same short-circuit behavior as in C. 
 
 #### Sample
 
@@ -15,6 +15,7 @@ public function main() {
     boolean b1 = true;
     boolean b2 = false;
 
+    // Logical operators with boolean.
     boolean b3 = !b1;
     io:println(b3);
 
