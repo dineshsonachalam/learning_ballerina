@@ -149,8 +149,8 @@
                         <h1 id="boolean"><a class="header" href="#boolean">Boolean</a></h1>
 <ul>
 <li>The <code>boolean</code> type has two values: <code>true</code>, <code>false</code>.</li>
-<li>The logical operators, ‘!’ , ‘||’ and ‘&amp;&amp;’ are  supported with boolean types. </li>
-<li>The ‘||’ and ‘&amp;&amp;’ operators support the same short-circuit behavior as in C. </li>
+<li>The logical operators, <code>!</code> , <code>||</code> and <code>&amp;&amp;</code> are  supported with boolean types. </li>
+<li>The <code>||</code> and <code>&amp;&amp;</code> operators support the same short-circuit behavior as in C. </li>
 </ul>
 <h4 id="sample"><a class="header" href="#sample">Sample</a></h4>
 <p><a href="https://play.ballerina.io/?gist=d06ca052f4412b241a4afd1a50a8afbd&file=boolean.bal" target="_blank">Run in Playground   </a></p>
@@ -160,6 +160,7 @@ public function main() {
     boolean b1 = true;
     boolean b2 = false;
 
+    // Logical operators with boolean.
     boolean b3 = !b1;
     io:println(b3);
 
