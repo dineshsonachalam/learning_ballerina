@@ -1,0 +1,17 @@
+name: Test Samples
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Ballerina Run
+      uses: ballerina-platform/ballerina-action/@master
+      with:
+        args: 
+          run code/float.bal
+   
