@@ -26,5 +26,10 @@ jobs:
     - name: Run sample
       id: run_sample
       run: |
-          echo "::set-output name=BAL_VERSION::$(bal -v)\n"
           echo "::set-output name=BAL_OUT::$(bal run code/float.bal)\n"
+          echo "::set-output name=FILE_OUT::$(cat code/float.bal)"
+    - name: Test sample      
+      run: |
+          echo "${{ steps.run_sample.outputs.BAL_OUT }}"
+          echo "---------------\n"
+          echo "${{ steps.run_sample.outputs.FILE_OUT }}"
