@@ -7,14 +7,6 @@ on:
   pull_request:
 
 jobs:
-  # auto-update-readme:
-  #     runs-on: ubuntu-latest
-  #     steps:
-  #       - uses: actions/checkout@v2
-  #       - name: Markdown autodocs
-  #         uses: dineshsonachalam/markdown-autodocs@v1.0.3
-  #         with:
-  #           output_file_paths: '[./src/simple_basic_types/boolean.md]'
   deploy:
     runs-on: ubuntu-20.04
     concurrency:
@@ -25,7 +17,7 @@ jobs:
       - name: Markdown autodocs
         uses: dineshsonachalam/markdown-autodocs@v1.0.3
         with:
-          output_file_paths: '[./src/simple_basic_types/boolean.md,./src/simple_basic_types/decimal.md]'
+          output_file_paths: '[./src/]'
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
