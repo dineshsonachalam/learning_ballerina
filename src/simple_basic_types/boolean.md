@@ -15,7 +15,7 @@
 <!-- The below code snippet is automatically added from ./../../code/boolean.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-- The real code
+- The real code..
 ```go
 import ballerina/io;
 
