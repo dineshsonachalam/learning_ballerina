@@ -26,6 +26,5 @@ jobs:
     - name: Run sample
       id: run_sample
       run: |
-          $output=(bal run code/boolean.bal)
-          Write-Output "::set-output name=BAL_OUT::$output"
-          echo steps.run_sample.outputs.BAL_OUT
+          echo "::set-output name=BAL_VERSION::$(bal -v)\n"
+          echo "::set-output name=BAL_OUT::$(bal run code/float.bal)\n"
