@@ -12,7 +12,7 @@
 - The injected code
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/boolean.bal) -->
-<!-- The below code snippet is automatically added from ./examples/readme/install.sh -->
+<!-- The below code snippet is automatically added from ./../../code/boolean.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 - The real code

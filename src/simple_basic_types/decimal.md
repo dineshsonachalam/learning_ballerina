@@ -6,19 +6,9 @@
 
 #### Sample
 
-```go
-import ballerina/io;
-
-public function main() {
-    //Float doesn't represent decimal fractions exactly.
-    float f = 100.10 - 0.01;
-    io:println(f);
-
-    //Decimal represents decimal fractions exactly.
-    decimal d = 100.10 - 0.01;
-    io:println(d);
-}
-```
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/decimal.bal) -->
+<!-- The below code snippet is automatically added from ./../../code/decimal.bal -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 #### Output
 ```

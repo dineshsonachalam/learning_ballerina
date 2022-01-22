@@ -25,7 +25,7 @@ jobs:
       - name: Markdown autodocs
         uses: dineshsonachalam/markdown-autodocs@v1.0.3
         with:
-          output_file_paths: '[./src/simple_basic_types/boolean.md]'
+          output_file_paths: '[./src/simple_basic_types/boolean.md,./src/simple_basic_types/decimal.md]'
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
