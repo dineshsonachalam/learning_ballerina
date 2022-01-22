@@ -8,6 +8,24 @@
 #### Sample
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/float.bal) -->
+<!-- The below code snippet is automatically added from ./../../code/float.bal -->
+```bal
+import ballerina/io;
+
+public function main() {
+    float f1 = 1.67;
+
+    int i1 = 5;
+
+    // Use `<T>` for explicit conversions.
+    float f2 = f1 + <float>i1;
+    io:println(f2);
+
+    //Use ballerina/lang.float function.
+    float f3 =f1.round();
+    io:println(f3);   
+}
+```
 <!-- The below code snippet is automatically added from ./../../code/float.bal -->:q:q
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
