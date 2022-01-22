@@ -12,7 +12,6 @@ jobs:
       steps:
         - uses: actions/checkout@v2
         - name: Markdown autodocs
-          run: echo "11111autodocs"
           uses: dineshsonachalam/markdown-autodocs@v1.0.3
           with:
             output_file_paths: '[./src/simple_basic_types/boolean.md]'
@@ -24,7 +23,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup mdBook
-        run: echo "22222 mdbook"
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: '0.4.10'
