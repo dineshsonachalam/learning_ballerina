@@ -8,12 +8,11 @@
 #### Sample
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/float.bal) -->
-<!-- The below code snippet is automatically added from ./../../code/float.bal -->:q:q
+<!-- The below code snippet is automatically added from ./../../code/float.bal -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 #### Output
 
-```
-6.67
-2.0
-```
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/float.bash) -->
+<!-- The below code snippet is automatically added from ./../../code/float.bash -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
