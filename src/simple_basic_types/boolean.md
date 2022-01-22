@@ -8,6 +8,14 @@
 
 <a href="https://play.ballerina.io/?gist=d06ca052f4412b241a4afd1a50a8afbd&file=boolean.bal" target="_blank">Run in Playground   </a>
 
+
+- The injected code
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./code/boolean.bal) -->
+<!-- The below code snippet is automatically added from ./examples/readme/install.sh -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+- The real code
 ```go
 import ballerina/io;
 
