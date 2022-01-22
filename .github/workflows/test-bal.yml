@@ -26,10 +26,10 @@ jobs:
     - name: Run sample
       id: run_sample
       run: |
-          echo "::set-output name=BAL_OUT::$(bal run code/float.bal)\n"
-          echo "::set-output name=FILE_OUT::$(cat code/float.bal)"
+          echo "BAL_OUT=$(bal run code/float.bal)" >> $GITHUB_ENV
+          echo "FILE_OUT=$(cat code/float.bash)" >> $GITHUB_ENV
     - name: Test sample      
       run: |
-          echo "${{ steps.run_sample.outputs.BAL_OUT }}"
+          echo ${{ env.BAL_OUT }}
           echo "---------------\n"
-          echo "${{ steps.run_sample.outputs.FILE_OUT }}"
+          echo ${{ env.FILE_OUT }}
