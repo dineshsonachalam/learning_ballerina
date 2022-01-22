@@ -405,9 +405,23 @@ public function main() {
 <h4 id="sample-1"><a class="header" href="#sample-1">Sample</a></h4>
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./../../code/float.bal) -->
 <!-- The below code snippet is automatically added from ./../../code/float.bal -->
-<pre><code class="language-bal">
+<pre><code class="language-bal">import ballerina/io;
+
+public function main() {
+    float f1 = 1.67;
+
+    int i1 = 5;
+
+    // Use `&lt;T&gt;` for explicit conversions.
+    float f2 = f1 + &lt;float&gt;i1;
+    io:println(f2);
+
+    //Use ballerina/lang.float function.
+    float f3 =f1.round();
+    io:println(f3);   
+}
 </code></pre>
-<!-- The below code snippet is automatically added from ./../../code/float.bal -->
+<!-- The below code snippet is automatically added from ./../../code/float.bal -->:q:q
 <!-- MARKDOWN-AUTO-DOCS:END -->
 <h4 id="output-1"><a class="header" href="#output-1">Output</a></h4>
 <pre><code>6.67
