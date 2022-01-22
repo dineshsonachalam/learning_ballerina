@@ -17,7 +17,7 @@ jobs:
       - name: Markdown autodocs
         uses: dineshsonachalam/markdown-autodocs@v1.0.3
         with:
-          output_file_paths: '[./src/]'
+          output_file_paths: '[./src/*]'
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
