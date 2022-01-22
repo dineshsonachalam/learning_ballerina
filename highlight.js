@@ -3546,7 +3546,7 @@ hljs.registerLanguage(
     return function (e) {
       var n = {
           keyword:
-            "abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed float infix operator out by constructor super tailrec where const inner suspend typealias external expect actual trait volatile transient native default",
+            "public private remote abstract client listener xmlns resource final worker parameter returns return true false else while check checkpanic panic continue break typeof is null lock fork trap foreach new where select start flush wait do transaction transactional commit rollback retry base16 base64 match default type on annotation function source enum field version object record service as let table key from in if import const external order by conflict limit ascending descending join outer fail equals int byte float decimal string boolean xml json handle any anydata never var map error stream readonly distinct class",
           built_in:
             "Byte Short Char Int Long Boolean Float Double Void Unit Nothing",
           literal: "true false null",
