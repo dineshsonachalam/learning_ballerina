@@ -52,10 +52,9 @@ jobs:
       with:
           text: $(bal run code/float.bal)
     - run: echo "${{ steps.get-changekog2.outputs.value }}"
-    - if: ${{ steps.get-changekog1.outputs.value }} != ${{ steps.get-changekog2.outputs.value }}
-        echo "INCORRECT"
-    - if: ${{ steps.get-changekog1.outputs.value }} == ${{ steps.get-changekog2.outputs.value }}
-        echo "CORRECT"
+    - name: Test result
+      if: ${{ steps.get-changekog1.outputs.value }} != ${{ steps.get-changekog2.outputs.value }}
+      run: echo "INCORRECT"
     # - name: Test sample 
     #   run: |
     #       echo ${{ needs.test.outputs.PROGRAM_OUT }}
