@@ -23,41 +23,22 @@ jobs:
         sudo dpkg -i $HOME/ballerina-linux-installer-x64-$JBAL_VERSION.deb
         echo "/usr/lib/ballerina/bin" >> $GITHUB_PATH
         echo "/usr/lib/ballerina/dependencies/jdk-11.0.8+10-jre/bin/java" >> $GITHUB_PATH
-    # - name: Run sample
-    #   id: run_sample
-    #   run: |
-    #       programOutput=$(bal run code/float.bal)
-    #       programOutput="${programOutput//'%'/'%25'}"
-    #       programOutput="${programOutput//$'\n'/'%0A'}"
-    #       programOutput="${programOutput//$'\r'/'%0D'}"
-    #       echo "::set-output name=PROGRAM_OUT::$programOutput"
+    - name: Run Tests
+      run: sh code/test.sh
 
-    #       fileContent=$(cat code/float.bash)
-    #       fileContent="${fileContent//'%'/'%25'}"
-    #       fileContent="${fileContent//$'\n'/'%0A'}"
-    #       fileContent="${fileContent//$'\r'/'%0D'}"
-    #       echo "::set-output name=FILE_OUT::$fileContent"
-
-
-    - name: test changelog
-      uses: mkungla/actions-set-text-output@v1
-      id: get-changekog
-      with:
-          text: $(cat code/float.bash)
-    - run: echo "${{ steps.get-changekog.outputs.value }}"
+    # - name: test changelog
+    #   uses: mkungla/actions-set-text-output@v1
+    #   id: file-out
+    #   with:
+    #       text: $(cat code/float.bash)
+    # - run: echo "${{ steps.file-out.outputs.value }}"
     
-    - name: test changelog2
-      uses: mkungla/actions-set-text-output@v1
-      id: get-changekog2
-      with:
-          text: $(bal run code/float.bal)
-    - run: echo "${{ steps.get-changekog2.outputs.value }}"
-    - name: Test result
-      if: ${{ steps.get-changekog1.outputs.value }} != ${{ steps.get-changekog2.outputs.value }}
-      run: echo "INCORRECT"
-    # - name: Test sample 
-    #   run: |
-    #       echo ${{ needs.test.outputs.PROGRAM_OUT }}
-    #       echo ${{ needs.test.outputs.FILE_OUT }}
-
-    #       echo "---------------\n"
+    # - name: test changelog2
+    #   uses: mkungla/actions-set-text-output@v1
+    #   id: program-out
+    #   with:
+    #       text: $(bal run code/float.bal)
+    # - run: echo "${{ steps.program-out.outputs.value }}"
+    # - name: Test result
+    #   if: ${{ steps.file-out.outputs.value }} != ${{ steps.program-out.outputs.value }}
+    #   run: echo "INCORRECT"
