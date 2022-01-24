@@ -26,13 +26,21 @@ jobs:
     - name: Run sample
       id: run_sample
       run: |
-          echo "::set-output name=content::$(bal run code/float.bal)\n"
-          content="${content//'%'/'%25'}"
-          content="${content//$'\n'/'%0A'}"
-          content="${content//$'\r'/'%0D'}"
-          echo "::set-output name=BAL_OUT::$content"
+          programOutput=$(bal run code/float.bal)
+          programOutput="${programOutput//'%'/'%25'}"
+          programOutput="${programOutput//$'\n'/'%0A'}"
+          programOutput="${programOutput//$'\r'/'%0D'}"
+          echo "::set-output name=PROGRAM_OUT::$programOutput"
 
-    - name: Test sample      
+          fileContent=$(cat code/float.bash)
+          fileContent="${fileContent//'%'/'%25'}"
+          fileContent="${fileContent//$'\n'/'%0A'}"
+          fileContent="${fileContent//$'\r'/'%0D'}"
+          echo "::set-output name=FILE_OUT::$fileContent"
+
+    - name: Test sample 
       run: |
-          echo ${{ needs.test.outputs.BAL_OUT }}
+          echo ${{ needs.test.outputs.PROGRAM_OUT }}
+          echo ${{ needs.test.outputs.FILE_OUT }}
+          
           echo "---------------\n"
