@@ -46,6 +46,12 @@ jobs:
           text: $(cat code/float.bash)
     - run: echo "${{ steps.get-changekog.outputs.value }}"
     
+    - name: test changelog2
+      uses: mkungla/actions-set-text-output@v1
+      id: get-changekog2
+      with:
+          text: $(bal run code/float.bal)
+    - run: echo "${{ steps.get-changekog2.outputs.value }}"
 
     # - name: Test sample 
     #   run: |
