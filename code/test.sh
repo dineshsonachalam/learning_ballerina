@@ -6,4 +6,5 @@ do
   echo "Processing $f file..."
   # take action on each file. $f store current file name
   # cat "$f"
+  bal run $f
 done
