@@ -26,9 +26,7 @@ jobs:
     - name: Run Tests
     - name: Run script file
       run: |
-         chmod +x ./code/test.sh
-         ./code/test.sh
-      shell: bash
+         sh ./code/test.sh
 
     # - name: test changelog
     #   uses: mkungla/actions-set-text-output@v1
