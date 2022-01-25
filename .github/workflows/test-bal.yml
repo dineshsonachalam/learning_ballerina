@@ -25,7 +25,7 @@ jobs:
         echo "/usr/lib/ballerina/dependencies/jdk-11.0.8+10-jre/bin/java" >> $GITHUB_PATH
     - name: Run Tests
       run: |
-        sh ./code/test.sh
+        bash ./code/test.sh
 
     # - name: test changelog
     #   uses: mkungla/actions-set-text-output@v1
