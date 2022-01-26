@@ -1,20 +1,14 @@
-name: github pages
+name: markdown-autodocs
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
+    branches:    
+      - '**'        # matches every branch
 
-jobs:
-  deploy:
-    runs-on: ubuntu-20.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-    steps:
-      - uses: actions/checkout@v2
-      
-      - name: Markdown autodocs
-        uses: dineshsonachalam/markdown-autodocs@v1.0.3
-        with:
-          output_file_paths: '[./src/simple_basic_types/*]'
+jobs:        
+  auto-update-readme:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Markdown autodocs
+          uses: dineshsonachalam/markdown-autodocs@v1.0.4
