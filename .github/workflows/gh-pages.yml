@@ -18,19 +18,3 @@ jobs:
         uses: dineshsonachalam/markdown-autodocs@v1.0.3
         with:
           output_file_paths: '[./src/simple_basic_types/*]'
-
-      # - name: Setup mdBook
-      #   uses: peaceiris/actions-mdbook@v1
-      #   with:
-      #     mdbook-version: '0.4.10'
-      #     # mdbook-version: 'latest'
-
-      # - run: mdbook build
-
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   if: ${{ github.ref == 'refs/heads/master' }}
-      #   with:
-      #     github_token: ${{ secrets.LEARNING_BALLERINA_SECRET }}
-      #     publish_branch: gh-pages
-      #     PUBLISH_DIR: ./book
